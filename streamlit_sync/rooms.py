@@ -28,7 +28,10 @@ def exit_room() -> None:
     synced_state.unregister_session()
 
     # Reset values set by room
-    st_hack.del_internal_values(synced_state.state.keys())
+    try:
+        st_hack.del_internal_values(synced_state.state.keys())
+    except KeyError:
+        print("Failed to delete internal values.")
 
     # Rerun to re-update frontend accordingly
     st.experimental_rerun()

@@ -136,6 +136,9 @@ class _SyncedState:
                         if not is_synced(key):
                             continue
 
+                        if key.startswith("$$WIDGET_ID-"):
+                            continue
+
                         key = st_hack.widget_id_to_user_key(key)
 
                         if value != self.state.get(key):

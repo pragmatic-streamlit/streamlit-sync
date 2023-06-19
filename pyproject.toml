@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "streamlit-sync"
-version = "0.2.0.post2"
+version = "0.2.0.post5"
 description = ""
 authors = ["Wauplin <lucainp@gmail.com>"]
 license = "MIT"
